@@ -3,6 +3,11 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "broken": ["./dist/broken"],
+      "testlib": ["./dist/testlib"],
+      "working": ["./dist/working"]
+    },
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
@@ -21,5 +26,25 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "files": []
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/broken/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/broken/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/working/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/working/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/testlib/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/testlib/tsconfig.spec.json"
+    }
+  ]
 }

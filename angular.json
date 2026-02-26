@@ -6,5 +6,31 @@
   },
   "newProjectRoot": "projects",
   "projects": {
+    "testlib": {
+      "projectType": "library",
+      "root": "projects/testlib",
+      "sourceRoot": "projects/testlib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/testlib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/testlib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/testlib/tsconfig.spec.json"
+          }
+        }
+      }
+    }
   }
 }
